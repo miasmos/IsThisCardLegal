@@ -10,6 +10,8 @@ body {
 	font-weight: 300;
 	overflow: hidden;
 	position: relative;
+	min-height: 367px;
+	min-width: 320px;
 
 	background: rgba(43,62,80,1);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(43,62,80,1) 0%, rgba(37,39,69,1) 100%);
@@ -136,7 +138,7 @@ footer div {
 
 footer div img {
 	height: 100%;
-	-webkit-transition: all 0.5s; /* Safari */
+	-webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -145,7 +147,7 @@ footer div img:hover {
 	-webkit-transform(1.1);
 }
 
-@media (min-device-aspect-ratio:4/3) {
+@media (max-aspect-ratio:4/3) {
 	#logo {
 		padding-top: 25px;
 		width: 150px;
