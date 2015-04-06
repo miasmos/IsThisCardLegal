@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 include 'credentials.php';
-$term = $_GET["term"];
+$term = urldecode( $_GET["term"]);
 
 $db = new mysqli($server, $username, $password, $username);
 if($db->connect_errno > 0){

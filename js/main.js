@@ -37,12 +37,17 @@ $('.search .term').on('keydown', function(e) {
 			break;
 	}
 
-	var char = String.fromCharCode(e.which).toLowerCase();
-	var alpha = char.search(/[a-zA-Z0-9 ,.!"'&]/i) > -1;
+	var char = String.fromCharCode(e.which);
+	var alpha = char.search(/[a-zA-Z0-9/]/i) > -1;
+	var punctuation = char.search(/[ ,.!"'&#/]/i) > -1;
 	var backspace = e.which == 8;
-	if (!alpha && !backspace) return; //return if pressed key wasn't backspace or alphanumeric
+	if (!alpha && !backspace && !punctuation) return; //return if pressed key wasn't backspace or alphanumeric
 	$('#legalities').fadeOut();
-	var term = alpha ? $(this).val() + char : $(this).val();
+	if (alpha) char = char.toLowerCase();
+	if (char == '7' && e.shiftKey) char = '&';
+	if (char == '1' && e.shiftKey) char = '!';
+	if (char == '3' && e.shiftKey) char = '#';
+	var term = alpha || punctuation ? $(this).val() + char : $(this).val();
 	if (backspace) term = term.substring(0, term.length - 1);
 
 	if (term in autocompleteCache) {
