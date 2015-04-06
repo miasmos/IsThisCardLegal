@@ -9,6 +9,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	overflow: hidden;
+	position: relative;
 
 	background: rgba(43,62,80,1);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(43,62,80,1) 0%, rgba(37,39,69,1) 100%);
@@ -20,11 +21,18 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3e50', endColorstr='#252745', GradientType=1 );
 }
 
+#wrapper {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 95%;
+}
+
 #logo {
 	margin: 0 auto;
 	width: 210px;
 	display: block;
-	margin-top: 120px;
+	padding-top: 120px;
 }
 
 .search {
@@ -109,7 +117,7 @@ body {
 footer {
 	height: 70px;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	background-color: #333;
 	-webkit-box-shadow: inset 0 20px 20px -20px;
@@ -135,4 +143,52 @@ footer div img {
 footer div img:hover {
 	transform: scale(1.1);
 	-webkit-transform(1.1);
+}
+
+@media (min-device-aspect-ratio:4/3) {
+	#logo {
+		padding-top: 25px;
+		width: 150px;
+	}
+
+	.search {
+		margin-top: 26px;
+	}
+
+	footer {
+		height: 50px;
+	}
+
+	footer div {
+		height: 66%;
+		width: 126px;
+		margin-top: 10px;
+	}
+
+	#legalities {
+		margin-top: 48px;
+	}
+
+	#legalities li .glyphicon {
+		font-size: 14pt;
+	}
+
+	#legalities li:nth-child(even) span:last-child {
+		padding-left: 40px;
+	}
+	#legalities li:nth-child(odd) span:last-child {
+		padding-right: 40px;
+	}
+	#legalities li:nth-child(odd) span {
+		padding-right: 5px;
+	}
+	#legalities li:nth-child(even) span {
+		padding-left: 5px;
+	}
+}
+
+@media(max-height:200px) {
+	footer {
+		display: none;
+	}
 }

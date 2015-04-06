@@ -7,6 +7,10 @@ $('#go').on('mousedown', function(e) {
 	}
 });
 
+$('.search .cached').on('focus', function(e) {
+	$('.search .term').val($(this).val());
+	$('.search .term').focus();
+});
 
 $('.search .term').on('keydown', function(e) {
 	var self = this;
