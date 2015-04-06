@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Is this card legal? | Magic: The Gathering card format legality</title>
+    <link href="css/theme.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,500' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <img id="logo" src="images/logo.png"/>
+    <div class="input-group search">
+      <div class="form-control" style="background: transparent;">
+        <input type="text" class="form-control term">
+        <input type="text" class="form-control cached" value="&quot;ach! hans, run!&quot;">
+      </div>
+      <span class="input-group-btn">
+        <button id="go" class="btn btn-default" type="button" style="height:40px">Go</button>
+      </span>
+    </div>
+    <ul id="legalities" style="display:none;">
+      <li id="block"><span class="glyphicon glyphicon-ok pull-right"></span><span>Block</span></li>
+      <li id="legacy"><span class="glyphicon glyphicon-remove pull-left"></span><span>Legacy</span></li>
+      <li id="standard"><span class="glyphicon glyphicon-ok pull-right"></span><span>Standard</span></li>
+      <li id="vintage"><span class="glyphicon glyphicon-ok pull-left"></span><span>Vintage</span></li>
+      <li id="modern"><span class="glyphicon glyphicon-ok pull-right"></span><span>Modern</span></li>
+      <li id="commander"><span class="glyphicon glyphicon-ok pull-left"></span><span>Commander</span></li>
+    </ul>
+    <footer>
+      <div>
+        <a target="_blank" href="https://twitter.com/intent/tweet?hashtags=IsThisCardLegal&url=http%3A%2F%2Fisthiscardlegal.com&via=PooleStephen"><img src="images/twit.png"></a>
+        <a target="_blank" href="https://github.com/stephenpoole/IsThisCardLegal/tree/master"><img src="images/git.png"></a>
+        <a target="_blank" href="http://lnkd.in/SsrrEA"><img src="images/li.png"></a>
+       </div>
+    </footer>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44175010-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
