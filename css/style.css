@@ -22,6 +22,10 @@ body {
 	background: radial-gradient(ellipse at center, rgba(43,62,80,1) 0%, rgba(37,39,69,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3e50', endColorstr='#252745', GradientType=1 );
 }
+a,a:hover,a:visited {
+	color: white;
+	text-decoration: none;
+}
 
 #wrapper {
 	position: absolute;
@@ -111,6 +115,10 @@ body {
 
 #legalities li:nth-child(even) span:last-child {
 	padding-left: 55px;
+}
+
+#legalities a {
+	cursor: default;
 }
 
 .glyphicon-ok {color:#64d078;}

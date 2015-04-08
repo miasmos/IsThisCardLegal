@@ -1,4 +1,4 @@
-var autocompleteCache = {}, searchCache = {}, lastAutocomplete = '';
+var autocompleteCache = {}, searchCache = {}, lastAutocomplete = '', defaultTerm = 'lightning bolt';
 $('.term').focus();
 
 $('#go').on('mousedown', function(e) {
@@ -36,7 +36,7 @@ $('.search .term').on('keydown', function(e) {
 		case 27: //escape
 			e.preventDefault();
 			$('.term').val('');
-			$('.cached').val("\"ach! hans, run!\"");
+			$('.cached').val(defaultTerm);
 			return;
 			break;
 	}
@@ -119,15 +119,17 @@ function doSearch(q) {
 
 			for (var l in data.legalities) {
 				if (data.legalities[l]) {
+					$('#'+l+' a').attr('title','playable');
 					$('#'+l+' span:first-child').removeClass('glyphicon-remove').addClass('glyphicon-ok');
 				} else {
+					$('#'+l+' a').attr('title','not playable');
 					$('#'+l+' span:first-child').removeClass('glyphicon-ok').addClass('glyphicon-remove');
 				}
 				$('#legalities').fadeIn();
 			}
 		} else if (data && data == -1 || !data) {
 			$('.term').val('');
-			$('.cached').val("\"ach! hans, run!\"");
+			$('.cached').val(defaultTerm);
 			flicker('.cached');
 			$('.term').focus();
 		}
