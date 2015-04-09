@@ -8,7 +8,7 @@ if($db->connect_errno > 0){
     echo -1;
 } else {
 	$term = $term."%";
-	$statement = $db->prepare("SELECT Nname FROM Ncards WHERE Nname LIKE ? ORDER BY Nname LIMIT 1");
+	$statement = $db->prepare("SELECT Nname FROM cards WHERE Nname LIKE ? ORDER BY Nname LIMIT 1");
 	$statement -> bind_param('s', $term);
 	$statement -> execute();
 	$statement -> bind_result($return);

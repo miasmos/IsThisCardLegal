@@ -95,7 +95,7 @@ a,a:hover,a:visited {
 }
 
 #legalities li:nth-child(odd) span {
-	padding-right: 15px;
+	padding-right: 7px;
 	text-align: right;
 }
 
@@ -105,16 +105,16 @@ a,a:hover,a:visited {
 }
 
 #legalities li:nth-child(odd) span:last-child {
-	padding-right: 55px;
+	padding-right: 47px;
 }
 
 #legalities li:nth-child(even) span {
-	padding-left: 15px;
+	padding-left: 7px;
 	text-align: left;
 }
 
 #legalities li:nth-child(even) span:last-child {
-	padding-left: 55px;
+	padding-left: 47px;
 }
 
 #legalities a {
@@ -123,6 +123,7 @@ a,a:hover,a:visited {
 
 .glyphicon-ok {color:#64d078;}
 .glyphicon-remove {color:#ba5959;}
+.glyphicon-restricted {color:#ba8459 !important;}
 
 footer {
 	height: 70px;
@@ -194,6 +195,9 @@ footer div img:hover {
 	}
 	#legalities li:nth-child(even) span {
 		padding-left: 5px;
+	}
+	#legalities li span:last-child {
+		line-height: 18px;
 	}
 }
 
