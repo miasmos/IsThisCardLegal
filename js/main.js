@@ -186,7 +186,7 @@ function doSearch(q) {
 		}
 
 		function cleanClasses(e) {
-			$(e).removeClass('glyphicon-restricted');
+			$(e).find('a').removeClass('glyphicon-restricted');
 		}
 	}
 }
